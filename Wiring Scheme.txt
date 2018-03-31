@@ -1,0 +1,36 @@
+                                                       N L1 L2 L3
+                                                       +  +  +  +
+                                                       |  |  |  |
+                                        6-20 V         |  |  |  |
+ YOU CAN ALSO USE A 5V POWER SUPPLY  Power Supply      |  |  |  |
+ BUT THEN YOU HAVE TO CONNECT        +------------+    |  |  |  |
+ VCC DIRECTLY TO VCC              +--+GND     Live+-------+  |  |
+                                  |  |            |    |  |  |  |
+                            +--------+VCC  Neutral+----+  |  |  |
+                            |     |  +------------+    |  |  |  |
+                            |     |                    |  |  |  |      VACUUM
+                            |     |     Relais         |  |  |  |      CLEANER (IF YOU HAVE A
+                            |     |  +------------+    |  |  |  |     +-------+ 3PHASE VACUUM STATION
++------------------------------------+GND       NO+-------------------+LIVE   | USE AN ELECTRIC CONTACTOR
+|                           |     |  |            |    |  |  |  |     |       | TRIGGERED BY THE RELAY
+|                           |  +-----+VCC      COM+-------+  |  |  +--+NEUTRAL| THAT ACTIVATES THE
+|                           |  |  |  |            |    |  |  |  |  |  +-------+ VACUUM)
+|       +----------------------------+SIG       NC|    +-----------+
+|       |    Arduino Nano   |  |  |  +------------+    |  |  |  |
+|       |   +------------+  |  |  |                    |  |  |  |
+|       |   |TX1      VIN+--+  |  |                    |  |  |  |
+|  AUTO |   |RX0      GND+--------+    ACS712  30A     |  |  |  |
+|    -  |   |RST      RST|     |  |   +-----------+    |  |  |  |
+|    |  |   |GND      +5V+-----+  +---+GND        |    |  |  |  |
+|    /  +---+D2        A7|     |      |      Sense+-------+  |  |
++---/ ------|D3        A6|     |    +-+OUT        |    |     |  |
+|        +--+D4        A5|     |    | |      Sense+-------+  |  |
+| MANUAL |  |D5        A4|     +------+VCC        |    |  |  |  |
+|    -   |  |D6        A3|          | +-----------+    |  |  |  |
+|    |   |  |D7        A2|          |                +-+--+--+--+-+
+|    /   |  |D8        A1|          |                |Sensed Power|
++---/ ---+  |D9        A0+----------+                |   Outlet   |
+            |D10     AREF|                           +------------+
+            |D11      3v3|
+            |D12      D13|
+            +------------+
