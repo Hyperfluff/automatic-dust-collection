@@ -4,7 +4,7 @@
                                         6-20 V         |  |  |  |
  YOU CAN ALSO USE A 5V POWER SUPPLY  Power Supply      |  |  |  |
  BUT THEN YOU HAVE TO CONNECT        +------------+    |  |  |  |
- VCC DIRECTLY TO VCC              +--+GND     Live+-------+  |  |
+ VCC DIRECTLY TO +5V              +--+GND     Live+-------+  |  |
                                   |  |            |    |  |  |  |
                             +--------+VCC  Neutral+----+  |  |  |
                             |     |  +------------+    |  |  |  |
